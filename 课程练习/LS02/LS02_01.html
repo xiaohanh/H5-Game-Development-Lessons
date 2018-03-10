@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas画布宽高属性、样式宽高及拉伸效果</title>
+    <script>
+        // window.addEventListener("load",eventWindowLoaded,false);
+        // function eventWindowLoaded(){
+        //     canvasApp("canvas");
+        //     canvasApp("CanvasTwo");
+        // }
+        
+        window.onload = function () {
+            let theCanvas = document.getElementById("canvas");
+//   canvas元素实际上有两套尺寸。一是元素本身的大小，另一个是元素绘图表面的大小。
+
+//  而通过CSS来设定canvas元素的大小，只会改变canvas的大小，不会 影响到绘图表面。
+//  当canvas元素的大小和绘图表面的大小不一致时，浏览器会对绘图表 面进行缩放，使其符合元素的大小。
+            //theCanvas.width = 200;//设置Canvas绘图大小
+            // theCanvas.height = 200;
+            let context = theCanvas.getContext("2d");
+
+            //测试画布的宽高
+            console.log(context.canvas.width, context.canvas.height);
+
+            //填充矩形
+            context.fillStyle = "#11ffaa";
+            context.fillRect(0, 0, 100, 100);
+
+            //text
+            context.fillStyle = "#000000";
+            context.font = "20px Sans-Serif";
+            context.textBaseline = "top";
+            //            context.fillText  ("Hello World!", 195, 80 );
+            context.fillText("Hello World!", 0, 100);
+
+            context.strokeStyle = "#000000";
+            context.lineWidth = 2;
+            context.strokeRect(0, 0, context.canvas.width, context.canvas.height);
+        }
+    </script>
+</head>
+
+<body>
+  
+
+
+        <!-- 当直接设置width和height属性时，实际上是改变了canvas元素的大小和元素绘图表面的大小。 -->
+        <canvas id="canvas" width="300" height="300" style="width:300px;height:150px;border:1px #ccc solid"></canvas>
+    
+   
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,7 +42,8 @@
         context.fill();
         context.stroke();
           //思考：context是什么类型？context的原型是什么？
-        // context的原型是CanvasRenderingContext2D
+        // context的构造器是CanvasRenderingContext2D
+//context的原型为CanvasRenderingContext2D.prototype
         console.log(context.constructor);
         console.log(context.__proto__);
 
