@@ -23,7 +23,13 @@ var res = {
     sp_animation_14:"res/Animation/grossini_dance_14.png",
 
     sp_animation_png:"res/Animation2/grossini-generic.png",
-    sp_animation_plist:"res/Animation2/grossini-generic.plist"
+    sp_animation_plist:"res/Animation2/grossini-generic.plist",
+
+    run1:"res/run/land.png",
+    run2:"res/run/Run.plist",
+    run3:"res/run/Run.png",
+    run4:"res/run/stone.png"
+
 
 };
 
